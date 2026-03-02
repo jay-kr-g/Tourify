@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .navbar-brand { color: #FF385C !important; font-weight: 700; font-size: 1.5rem; }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .btn-primary { background-color: #FF385C; border: none; }
+        .btn-primary:hover { background-color: #e31c5f; }
+        .about-section { padding: 80px 0; }
+        .feature-icon { font-size: 2rem; color: #FF385C; }
+
+/* Footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+        justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info{
+    text-align: center;
+    display: flex;
+    height: 8rems;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"></i> WanderLust</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="btn btn-outline-dark rounded-pill px-4 mb-2 mb-lg-0 mt-3 mt-lg-0" href="/signup">Signup</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-dark rounded-pill px-4" href="/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold">Find your next adventure.</h1>
+            <p class="lead mb-4">Discover unique stays and local experiences all around the world.</p>
+            <div class="bg-white p-2 rounded-pill shadow-lg d-inline-flex align-items-center px-4">
+                <span class="text-dark me-3"><i class="bi bi-search"></i> Where are you going?</span>
+                <a href="/listings"><button class="btn btn-primary rounded-pill px-4">Search</button></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">About the WanderLust Project</h2>
+                    <p class="text-muted">
+                        This project is a full-featured <strong>Airbnb Clone</strong> built to demonstrate modern web development capabilities. 
+                        It focuses on creating a seamless user experience for both travelers looking for a place to stay and hosts looking to list their properties.
+                    </p>
+                    <div class="row mt-4">
+                        <div class="col-sm-6 mb-3">
+                            <i class="bi bi-lightning-charge-fill feature-icon"></i>
+                            <h5 class="mt-2">Real-time Booking</h5>
+                            <p class="small text-muted">Efficient handling of reservations and availability.</p>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <i class="bi bi-shield-check feature-icon"></i>
+                            <h5 class="mt-2">Secure Payments</h5>
+                            <p class="small text-muted">Integrated security for both hosts and guests.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80" 
+                         alt="Modern Apartment" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+<%- include("../includes/footer.ejs") %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
